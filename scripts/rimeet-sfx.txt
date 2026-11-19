@@ -1,0 +1,8 @@
+;The comment below contains SFX script commands
+Path=RIMeet
+SavePath
+Title=RIMeet setup
+Text=RIMeet will be extracted to the selected folder.
+Overwrite=1
+Setup=RIMeet.exe
+Shortcut=P, RIMeet.exe, "", "RIMeet", "RIMeet"

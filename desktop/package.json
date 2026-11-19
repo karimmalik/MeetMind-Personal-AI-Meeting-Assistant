@@ -1,0 +1,71 @@
+{
+  "name": "meetmind-desktop",
+  "version": "0.5.4",
+  "private": true,
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "concurrently -k \"vite --host 127.0.0.1\" \"wait-on http://127.0.0.1:5173 && electron .\"",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "build:installer": "npm run build && electron-builder --win nsis"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "concurrently": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "typescript": "latest",
+    "vite": "latest",
+    "wait-on": "latest"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "electron": "latest",
+    "electron-builder": "^26.18.0"
+  },
+  "build": {
+    "appId": "com.rimeet.app",
+    "productName": "RIMeet",
+    "artifactName": "RIMeet-Setup-${version}.${ext}",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**",
+      "electron/**",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "../backend/target/rimeet-backend.jar",
+        "to": "backend/rimeet-backend.jar"
+      },
+      {
+        "from": "resources/runtime/java",
+        "to": "runtime/java"
+      },
+      {
+        "from": "resources/models/base",
+        "to": "models/base"
+      },
+      {
+        "from": "../dist/RIMeetWorker",
+        "to": "worker"
+      },
+      {
+        "from": "native-audio/bin/RIMeetLoopback.exe",
+        "to": "native-audio/RIMeetLoopback.exe"
+      },
+      {
+        "from": "native-audio/bin/NAudio.dll",
+        "to": "native-audio/NAudio.dll"
+      }
+    ],
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}

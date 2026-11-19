@@ -1,0 +1,61 @@
+# Dependencies and local runtimes
+/desktop/node_modules/
+/transcription-worker/.venv/
+/desktop/vendor/
+/desktop/resources/
+/resources/
+
+# Generated builds and packaged installers
+/backend/target/
+/desktop/dist/
+/desktop/release/
+/desktop/native-audio/bin/
+/build/
+/dist/
+*.tsbuildinfo
+*.pyc
+__pycache__/
+
+# Local meeting data, models, and large binaries
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.wav
+*.mp3
+*.m4a
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.flac
+*.ogg
+*.onnx
+*.gguf
+*.bin
+*.exe
+*.jar
+*.dll
+*.nupkg
+*.zip
+*.7z
+*.rar
+
+# Secrets, machine settings, and diagnostics
+.env
+.env.*
+!.env.example
+.npmrc
+*.log
+*.log.*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

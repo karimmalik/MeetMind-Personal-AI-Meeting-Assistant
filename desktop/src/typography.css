@@ -1,0 +1,13 @@
+@font-face{font-family:Manrope;src:url('./assets/fonts/manrope-400.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:Manrope;src:url('./assets/fonts/manrope-500.ttf') format('truetype');font-style:normal;font-weight:500;font-display:swap}
+@font-face{font-family:Manrope;src:url('./assets/fonts/manrope-600.ttf') format('truetype');font-style:normal;font-weight:600;font-display:swap}
+@font-face{font-family:Manrope;src:url('./assets/fonts/manrope-700.ttf') format('truetype');font-style:normal;font-weight:700;font-display:swap}
+@font-face{font-family:Manrope;src:url('./assets/fonts/manrope-800.ttf') format('truetype');font-style:normal;font-weight:800;font-display:swap}
+@font-face{font-family:'DM Mono';src:url('./assets/fonts/dm-mono-400.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:'DM Mono';src:url('./assets/fonts/dm-mono-500.ttf') format('truetype');font-style:normal;font-weight:500;font-display:swap}
+
+:root{--font-ui:Manrope,"Segoe UI",sans-serif;--font-meta:"DM Mono",Consolas,monospace;font-family:var(--font-ui)}
+button,input,select,textarea{font-family:var(--font-ui)}
+.eyebrow,.card-label,.field-label,.status,.meeting-status,.meeting-meta span,.privacy-chip,.transcript-segment span,.frame-grid figcaption{font-family:var(--font-meta)}
+h1,h2,h3,.brand,.meeting-copy strong,.card strong{letter-spacing:-.03em}
+.eyebrow,.card-label,.field-label{letter-spacing:.1em}

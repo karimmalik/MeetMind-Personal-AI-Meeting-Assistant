@@ -1,0 +1,4 @@
+faster-whisper==1.1.0
+requests>=2.31.0
+av==14.0.1
+pillow>=10.0.0
